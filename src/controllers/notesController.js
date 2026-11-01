@@ -33,7 +33,7 @@ export const updateNote = async (req, res) => {
   const note = await Note.findByIdAndUpdate(
     noteId,
     req.body,
-    { new: true, runValidators: true },
+    { returnDocument: 'after', runValidators: true },
   );
 
   if (!note) {
