@@ -2,6 +2,7 @@
 import 'dotenv/config';
 import express from 'express';
 import cors from 'cors';
+import { errors } from 'celebrate';
 
 import { connectMongoDB } from './db/connectMongoDB.js';
 import { logger } from './middleware/logger.js';
@@ -22,6 +23,7 @@ app.use(notesRoutes);
 
 // Обробка помилок
 app.use(notFoundHandler);
+app.use(errors());
 app.use(errorHandler);
 
 // Підключаємо базу даних перед запуском сервера
