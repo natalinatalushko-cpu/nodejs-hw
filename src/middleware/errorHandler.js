@@ -18,4 +18,4 @@ export const errorHandler = (err, req, res, next) => {
       ? "Something went wrong. Please try again later."
       : err.message,
   });
-}
+};
