@@ -1,15 +1,15 @@
 import dns from 'node:dns/promises';
 import mongoose from 'mongoose';
 
-dns.setServers(['8.8.8.8', '1.1.1.1']);
+dns.setServers(['1.1.1.1', '8.8.8.8']);
 
 export const connectMongoDB = async () => {
   try {
-    const mongoUrl = process.env.MONGODB_URL;
-    await mongoose.connect(mongoUrl);
+    await mongoose.connect(process.env.MONGO_URL);
+
     console.log('✅ MongoDB connection established successfully');
   } catch (error) {
     console.error('❌ Failed to connect to MongoDB:', error.message);
-    process.exit(1); // аварійне завершення програми
+    process.exit(1);
   }
 };

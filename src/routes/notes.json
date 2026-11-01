@@ -1,0 +1,23 @@
+
+[
+  {
+    "title": "Complete Node.js homework",
+    "content": "Finish MongoDB integration",
+    "tag": "Work"
+  },
+  {
+    "title": "Buy groceries",
+    "content": "Milk, bread, eggs",
+    "tag": "Shopping"
+  },
+  {
+    "title": "Plan a trip",
+    "content": "Choose destination and dates",
+    "tag": "Travel"
+  },
+  {
+    "title": "Personal ideas",
+    "content": "Write down new project ideas",
+    "tag": "Ideas"
+  }
+]
